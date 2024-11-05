@@ -1,0 +1,101 @@
+/* Reset & Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background-color: #000; color: #fff; display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Logo */
+.logo { width: 100%; text-align: center; padding: 20px; }
+.logo img { height: 50px; }
+
+/* Container */
+.container { width: 90%; max-width: 1200px; margin: auto; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+
+/* Header Section */
+.header { display: flex; justify-content: space-between; width: 100%; padding-top: 20px; }
+.header .event-details { width: 45%; }
+.header h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.header p { font-size: 1rem; margin-bottom: 20px; line-height: 1.6; }
+.header .register-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.header .register-btn:hover { background-color: #333; color: #fff; }
+
+.header .video { width: 45%; }
+.header .video iframe { width: 100%; height: 250px; }
+
+/* Host and Agenda */
+.host-agenda { display: flex; justify-content: space-between; width: 100%; margin-top: 40px; }
+
+/* Host Details */
+.host-details { width: 45%; }
+.host-info { display: flex; align-items: center; }
+.host-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #fff;
+}
+.host-text h2 { font-size: 1.4rem; margin-bottom: 5px; }
+.host-description { margin: 10px 0; font-size: 0.9rem; }
+.social-media a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.social-media a:hover { color: #888; }
+
+/* Text Logo Style */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Agenda with Timeline */
+.agenda { width: 45%; }
+.agenda h2 { font-size: 1.8rem; margin-bottom: 15px; }
+.timeline { position: relative; padding-left: 20px; border-left: 2px solid #fff; }
+.timeline .event { margin-bottom: 20px; cursor: pointer; transition: transform 0.3s ease; }
+.timeline .event p { margin: 5px 0; font-size: 0.9rem; }
+.timeline .event.active { transform: scale(1.05); color: #aaa; }
+.timeline .event::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.timeline .event.active::before { transform: scale(1.3); }
+
+/* Footer Countdown */
+.footer { width: 100%; text-align: center; padding: 30px 0; font-size: 1.5rem; }
+#countdown {
+    display: inline-block;
+    padding: 10px;
+    background: linear-gradient(45deg, #fff, #888);
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}

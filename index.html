@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <div class="header">
+        <!-- Left: Event Details -->
+        <div class="event-details">
+            <h1>Event Name</h1>
+            <p>A short description about the event, what it covers, and why attendees should join.</p>
+            <button class="register-btn">Register Now</button>
+        </div>
+        <!-- Right: Video Embed -->
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/your-video-id" title="Event Demo Video" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Host and Agenda Section -->
+    <div class="host-agenda">
+        <!-- Host Details -->
+        <div class="host-details">
+            <div class="host-info">
+                <img src="host-image.jpg" alt="Host Image" class="host-image">
+                <div class="host-text">
+                    <h2>John Doe</h2>
+                    <p>Cybersecurity Expert</p>
+                    <p class="host-description">An experienced professional in the field of cybersecurity with numerous accolades and over a decade of experience in protecting critical data.</p>
+                    <div class="social-media">
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agenda with Interactive Timeline Effect -->
+        <div class="agenda">
+            <h2>Event Agenda</h2>
+            <div class="timeline">
+                <div class="event" onclick="highlightEvent(this)">
+                    <p><strong>Slide 1:</strong> Introduction and Overview</p>
+                </div>
+                <div class="event" onclick="highlightEvent(this)">
+                    <p><strong>Slide 2:</strong> Keynote Session</p>
+                </div>
+                <div class="event" onclick="highlightEvent(this)">
+                    <p><strong>Slide 3:</strong> Workshop and Hands-on Practice</p>
+                </div>
+                <div class="event" onclick="highlightEvent(this)">
+                    <p><strong>Slide 4:</strong> Q&A and Wrap-up</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Countdown Timer -->
+    <div class="footer">
+        <div id="timer">Event starts in: <span id="countdown"></span></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
